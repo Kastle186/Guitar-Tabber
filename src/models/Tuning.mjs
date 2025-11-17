@@ -7,7 +7,7 @@
  * Represents a musical tuning for a stringed instrument.
  * Each tuning has a name and an array of string keys (notes).
  */
-export default class Tuning {
+class Tuning {
     /** @type {string} */
     name;
 
