@@ -6,14 +6,6 @@
 import readline from 'readline';
 // import { TUNINGS } from '../models/Tuning.mjs';
 
-readline.emitKeypressEvents(process.stdin);
-
-if (process.stdin.isTTY) {
-    process.stdin.setRawMode(true);
-}
-
-process.stdin.resume();
-
 // console.log(TUNINGS[0].toString());
 //
 // const NUM_TUNINGS = TUNINGS.length;
