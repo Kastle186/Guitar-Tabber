@@ -3,7 +3,7 @@
  * Module containing the functionality to process user inputs on menu interfaces.
  */
 
-import {styleText} from 'node:util';
+import { styleText } from 'node:util';
 import readline from 'readline';
 
 /**
