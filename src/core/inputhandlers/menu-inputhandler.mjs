@@ -79,10 +79,11 @@ class TerminalMenuInputHandler extends MenuInputhandler {
         const bannerBorder = '*'.repeat(titleLen + 4);
 
         // Print the title in banner-style.
+        console.log('')
         console.log(styleText(['blueBright'], bannerBorder));
         console.log(styleText(['blueBright'], `* ${title} *`));
         console.log(styleText(['blueBright'], bannerBorder));
-        console.log('\n');
+        console.log('');
 
         // Print the menu's options, first one selected, and set the cursor to it.
         console.log(styleText(['greenBright'], `- ${this.options[0]}`));
@@ -157,7 +158,9 @@ class TerminalMenuInputHandler extends MenuInputhandler {
         readline.clearLine(process.stdout, 0);
 
         process.stdout.write(
-            styleText(['greenBright'], `- ${this.options[this.previousIndex]}\r`)
+            styleText(['greenBright'], `- ${this.options[this.selectedIndex]}\r`)
         );
     }
 }
+
+export { TerminalMenuInputHandler }
