@@ -22,6 +22,9 @@ class Tuning {
     constructor(name, stringKeys) {
         this.name = name;
 
+        // The keys can be received either in an already prepared array, or in
+        // a hyphen-delimited string, like in text tabs.
+
         if (Array.isArray(stringKeys))
             this.stringKeys = stringKeys;
         else if (typeof stringKeys == 'string')
@@ -42,49 +45,16 @@ class Tuning {
     }
 }
 
-// /**
-//  * Helper class to make it easier to use the list of tunings.
-//  */
-// class TuningsMenuList {
-//     /** @type {number} */
-//     static #selectionIndex = 0;
-//
-//     /** @type {[Tuning, boolean][]} */
-//     static #tunings = [
-//         // Select the first one by default.
-//         { 'tuning': new Tuning('Standard', 'E-A-D-G-B-E'), 'selected': true },
-//         { 'tuning': new Tuning('Half-Step Down', 'D#-G#-C#-F#-A#-D#'), 'selected': false },
-//         { 'tuning': new Tuning('One Step Down', 'D-G-C-F-A-D'), 'selected': false },
-//         { 'tuning': new Tuning('Drop D', 'D-A-D-G-B-E'), 'selected': false },
-//         { 'tuning': new Tuning('Open D', 'D-A-D-F#-A-D'), 'selected': false },
-//         { 'tuning': new Tuning('Drop C', 'C-G-C-F-A-D'), 'selected': false },
-//         { 'tuning': new Tuning('Open G', 'D-G-D-G-B-D'), 'selected': false },
-//         { 'tuning': new Tuning('Open C', 'C-G-C-G-C-E'), 'selected': false },
-//         { 'tuning': new Tuning('Drop B', 'B-Gb-B-E-Ab-Db'), 'selected': false },
-//         { 'tuning': new Tuning('Open E', 'E-B-E-G#-B-E'), 'selected': false },
-//         { 'tuning': new Tuning('Drop A', 'A-E-A-D-F#-B'), 'selected': false },
-//     ];
-//
-//     /** @type {number} */
-//     static #numTunings = this.#tunings.length;
-//
-//     static get tunings() {
-//         return this.#tunings;
-//     }
-//
-//     static selectUp() {
-//
-//     }
-//
-//     static selectDown() {
-//
-//     }
-//
-//     /**
-//      * Update the state of the menu list according to the received input from
-//      * the user interface.
-//      * @param {number} cursorMovement
-//      */
-//     static #select(cursorMovement) {
-//     }
-// }
+export const ALL_TUNINGS = [
+    new Tuning('Standard', 'E-A-D-G-B-E'),
+    new Tuning('Half-Step Down', 'D#-G#-C#-F#-A#-D#'),
+    new Tuning('One Step Down', 'D-G-C-F-A-D'),
+    new Tuning('Drop D', 'D-A-D-G-B-E'),
+    new Tuning('Open D', 'D-A-D-F#-A-D'),
+    new Tuning('Drop C', 'C-G-C-F-A-D'),
+    new Tuning('Open G', 'D-G-D-G-B-D'),
+    new Tuning('Open C', 'C-G-C-G-C-E'),
+    new Tuning('Drop B', 'B-Gb-B-E-Ab-Db'),
+    new Tuning('Open E', 'E-B-E-G#-B-E'),
+    new Tuning('Drop A', 'A-E-A-D-F#-B')
+]
